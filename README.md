@@ -13,7 +13,6 @@
 
 5} Also set Z of our plane to 5. This way we'll be veiwing a little above the origin, so we can now Spawn our fruits at the Origin.
 
-![Standing with Gun](https://raw.githubusercontent.com/hackorlyf/portal-gun-RickandMorty/main/SS/Unity%202018.4.28f1%20Personal%20-%20PortalScene.unity%20-%20portal%20-%20PC%2C%20Mac%20%26%20Linux%20Standalone%20_DX11_%2026-08-2023%2002_09_20.png)
 ![] ()
 
 ## Update-1 Fruits Prefab
@@ -56,13 +55,20 @@
 ![] ()
 
 ## Update-4 Blade
-1} Added a Game Object named Blade to our Scene and added Playet tag to it.
+1} Added a Game Object named Blade to our Scene and added Playet tag to it. Create a C# script named Blade which will be responsible for the logic behind Slicing our Fruits based on our mouse Input in the scene. Added this script as a component in our Game Object Blade. 
 
-2} Create a C# script named Blade which will be responsible for the logic behind Slicing our Fruits based on our mouse Input in the scene. Added this script as a component in our Game Object Blade.
+2} Added a Collider to our Blade, this collider will be referenced for Slicing our fruits. Created reference to our collider in our Blade.cs script and intializing and getting this component in our Awake() function.
+
+3} Enable and Disable this collider in our StartSlicing() and StopSlicing() functions respectively. We also calculate our Direction and Velocity of our blade so we can DISABLE it at velocity < MinSliceVelocity.
 
 ![] ()
 
 ## Update-5 Blade Trail
+1} Added a Trail to our Blade as its child, this Trail will be referenced for Trailing our Blade. Created reference to our TrailRenderer in our Blade.cs script and intializing and getting this component(GetComponentInChild<TrailRenderer>() since its a child of our Blade Game Object) in our Awake() function.
+
+2} Enable and Disable it in the same way as our Blade. bladeTrail.Clear() when we start slicing to fix the bug which appears on clicking screen (the trail getting rendered by just clicking which we don't want).
+
+3} In our Trail which is child of our Blade Game Object we changed time to 0.2 (thats how long our trail will be rendered) and End cap vertices to 4 (so it looks circular at its end points). Made the Width vs Time graph linear with Width = 0.4 at Time = 0 and Width = 0 at Time = 1.
 
 ![] ()
 
