@@ -73,10 +73,22 @@
 ![] ()
 
 ## Update-6 Slicing
+1} Created a new script called Fruit and assigned it to our Fruit_base Prefab hence this script gets applied to all the varients created by us from Fruit_base i.e all Fruits.
+
+2} In this script we need to get reference to our Game Object whole & sliced and swap them. Check for collision with our Player Tag that is Blade in our Fruit Script.
+
+3} We want to Transfer our velocity of whole to the sliced Fruit. For this, at collision we pass in the parameters from Blade namely as direction, position and force to our Slice() function.
+
+![] ()
+
+![] ()
 
 ![] ()
 
 ## Update-7 Particle Effect
+1} Right click and Add a particle effect to Fruit_base in Heirarchy because we want our fruits juice coming out as we slice it and since we are applying this particle effect to our Fruit_base it will automatically be applied to all of our Fruits.
+
+2} In Inspector of our particle system we changed Rate over time to 0 as we want our particles to be a single burst. Changed shape to sphere as we want paricles coming out from all direction and not just a cone and Thickness to 0, this will contribute in all particles spawning at the edge of our Fruit.
 
 ![] ()
 
