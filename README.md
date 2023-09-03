@@ -118,10 +118,29 @@
 
 3} Go to Spawner game object and drag our bomb prefab onto our spawner script, and all we need to do in our bomb prefab is check for collision with our player(blade) tag with CompareTag(Player) function and call Explode() function from our Game Manager script when collision is detected. 
 
-4} Explode() function disables the spawner and blade creating a Game Over kind of State.
+4} Explode() function disables the spawner and blade creating a Game Over kind of State for which we are going to have fadeIn(white) state and fadeOut(back to normal).
 
 ![] ()
 
 ![] ()
 
 ## Update-10 Explode Sequence
+
+1} Add an image component on canvas which will act as FadeIn white and scale it to entire screen. Now we can just change the alpha to create a fade in and out effect.
+
+2} By default it will be at 0 and turn off Raycast target so it doesn't prevent us from clicking other things and we do the same thing for our score Text.
+
+3} Get a reference to our Image in GameManager script and name it as fadeImage and then create our routine function named ExplodeSequence(). We Fade into White and then hold there for a second.
+
+4} When we'll be switching to FadeIn white we want to clear all Fruits and Bombs in our Scene. Also we need to re-enable our Spawner.
+
+5} Go to Game Manager game object in our scene and assign Fade Image from our canvas to the GameManager script.
+
+![] ()
+
+![] ()
+
+![] ()
+
+![] ()
+
