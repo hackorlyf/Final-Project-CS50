@@ -90,9 +90,24 @@
 
 2} In Inspector of our particle system we changed Rate over time to 0 as we want our particles to be a single burst. Changed shape to sphere as we want paricles coming out from all direction and not just a cone and Thickness to 0, this will contribute in all particles spawning at the edge of our Fruit.
 
+3} Size over time graph changed to Linear with size going from 1 to 0 over time, this was done to give particles a feel of a Droplet. Render mode changed to Mesh of a sphere and set the material to be the same as of the fruit being sliced. 
+
+4} Now go to each Fruit prefab and override the material in particle effect to the material of respective fruits Outside.
+
+5} All we need to do now is Create a reference of Particle system in our Fruit script and use Play() function in our Slice() function to show the particle effect when a Fruit is Sliced.
+
+![] ()
+
 ![] ()
 
 ## Update-8 Scoring/UI
+1} Create a Canvas(Raw Text) in our Hierarchy which is a UI component provided by Unity. Set Horizontal and Vertical overflow so that it balances it's textBox and we don't have to worry about size.
+
+2} Set the anchor to top left as this will be featuring our Score. Changed colour to a golden yellowish colour.
+
+3} We handle our scoring in a new script called GameManager. We call our IncreaseScore() function of our GameManager script from the Slice() function in our Fruit Script. Assign text in Canvas to our GameManager script in our Game Manager game object.
+
+![] ()
 
 ![] ()
 
