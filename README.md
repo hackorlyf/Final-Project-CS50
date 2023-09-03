@@ -3,11 +3,11 @@
 # Friut Ninja
 
 ## Update-0 Importing Assets and Scene SetUp
-1} Pulled 2 different Models and a Wood Texture for are Assets. One is the Whole friut and other is Sliced friut.
+1} Pulled 2 different Models and a Wood Texture for our Assets. One is the Whole fruit and other is Sliced fruit.
 
 2} Turned off Compression for our Wood Texture as it was losing its quality because of it.
 
-3} Added a Plane to our Scene and applied rotations and scaling to it such that it becomes the screen we'll be seeing with our wood texture on it.
+3} Added a Plane to our Scene and applied rotations and scaling to it such that it becomes the veiw we'll be seeing with our wood texture on it.
 
 4} Created a material named Background and added to it to our Mesh Renderer/Materials of Plane and then Dragged our Texture to Albedo and set smoothness to 0 while turning off our highlights and reflections because we don't need these on our Plane.
 
