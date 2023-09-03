@@ -112,6 +112,15 @@
 ![] ()
 
 ## Update-9 Bombs
+1} We Create a bomb in our hierarchy by right clicking and adding a game object named bomb and adding a sphere and 2 cyclinders to it. Create materials for our bomb and bomb Wick in Assets/Materials of colour black and dark red respectivily.
+
+2} Added bomb prefab reference and bombChance variable in our spawner script so there's a chance of bomb getting spawned too. Also make a new script named as Bomb and add it to our bomb Prefab.
+
+3} Go to Spawner game object and drag our bomb prefab onto our spawner script, and all we need to do in our bomb prefab is check for collision with our player(blade) tag with CompareTag(Player) function and call Explode() function from our Game Manager script when collision is detected. 
+
+4} Explode() function disables the spawner and blade creating a Game Over kind of State.
+
+![] ()
 
 ![] ()
 
